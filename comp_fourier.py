@@ -104,6 +104,7 @@ def conv_fourier(x,dims,minlens,nxcirc = None,condthresh = 1e8):
 
 	Bx = [kron_ops.kronmult(Bffts,np.transpose(batch)) for batch in x]
 	Bx = [prune[ii] for prune in Bx]
+	print("hey")
 	return Bx[0], wwnrm, Bffts[0], nxcirc
 
 
