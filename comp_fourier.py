@@ -104,10 +104,7 @@ def conv_fourier(x,dims,minlens,nxcirc = None,condthresh = 1e8):
 
 	Bx = [kron_ops.kronmult(Bffts,np.transpose(batch)) for batch in x]
 	Bx = [prune[ii] for prune in Bx]
-
-	return Bx, wwnrm, Bffts, nxcirc
-
-
+	return Bx[0], wwnrm, Bffts[0], nxcirc
 
 
 def conv_fourier_mult_neuron(x,dims,minlens,num_neurons,nxcirc = None,condthresh = 1e8):
